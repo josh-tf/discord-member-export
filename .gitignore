@@ -1,0 +1,56 @@
+# Dependencies
+node_modules/
+.pnpm-store/
+
+# Build outputs
+dist/
+*.tsbuildinfo
+
+# Environment variables - NEVER commit these (contain secrets)
+.env
+.env.local
+.env.*.local
+
+# Database files
+data/*.db
+data/*.db-wal
+data/*.db-shm
+data/backups/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+pnpm-debug.log*
+
+# Temporary files and exports
+temp/
+*.tmp
+*.temp
+
+# Export outputs (generated data files)
+exports/
+
+# Archive files
+*.7z
+*.zip
+*.tar.gz
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Testing / coverage
+coverage/
+.nyc_output/
+
+# Claude Code project files
+.claude/
+.serena

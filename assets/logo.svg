@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="200" y2="200" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#5865F2"/>
+      <stop offset="1" stop-color="#3C44AA"/>
+    </linearGradient>
+  </defs>
+  <!-- Background -->
+  <rect width="200" height="200" rx="60" fill="url(#bg)"/>
+  <g transform="translate(0, -14)">
+    <!-- Back-left person (dimmed) -->
+    <circle cx="78" cy="75" r="19" fill="white" opacity="0.45"/>
+    <path d="M40 140 Q40 94 78 94 Q116 94 116 140Z" fill="white" opacity="0.45"/>
+    <!-- Front-right person -->
+    <circle cx="122" cy="68" r="24" fill="white"/>
+    <path d="M80 140 Q80 92 122 92 Q164 92 164 140Z" fill="white"/>
+    <!-- Export arrow -->
+    <g stroke="white" stroke-linecap="round" fill="none" opacity="0.88">
+      <line x1="100" y1="156" x2="100" y2="180" stroke-width="6"/>
+      <polyline points="88,170 100,184 112,170" stroke-width="6" stroke-linejoin="round"/>
+    </g>
+  </g>
+</svg>
