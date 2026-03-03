@@ -4,7 +4,7 @@
 
 A Discord bot for exporting guild member lists with advanced filtering, real-time progress tracking, and export history.
 
-<img src="preview.svg" alt="Discord Member Export Bot"/>
+<img src="assets/preview.svg" alt="Discord Member Export Bot"/>
 
 ## Features
 
