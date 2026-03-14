@@ -54,7 +54,9 @@ process.on('SIGTERM', () => shutdown('SIGTERM'));
     logger.info('='.repeat(50));
     logger.info('');
 
-    validateConfig();
+    if (!validateConfig()) {
+      process.exit(0);
+    }
     await bot.start();
   } catch (error) {
     logger.error('Failed to start bot:', error);
