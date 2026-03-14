@@ -14,7 +14,7 @@ A Discord bot for exporting guild member lists with advanced filtering, real-tim
 - Export history and statistics via SQLite
 - Rate-limited fetching with automatic retry (45 req/s)
 
-## One-Click Deploy
+## One-click deploy
 
 Host the bot on a cloud provider without any local setup:
 
@@ -34,8 +34,8 @@ Host the bot on a cloud provider without any local setup:
 1. **Clone and install**
 
    ```bash
-   git clone <repo-url>
-   cd member-export
+   git clone https://github.com/josh-tf/discord-member-export.git
+   cd discord-member-export
    pnpm install
    ```
 
@@ -97,7 +97,7 @@ EXPORT_BATCH_SIZE=1000
 
 See `.env.example` for the full list of options.
 
-## Project Structure
+## Project structure
 
 ```
 src/
@@ -126,6 +126,7 @@ src/
 │   ├── export.ts
 │   ├── stats.ts
 │   └── export-history.ts
+├── formatters/             # CSV, JSON, TXT and XLSX writers
 └── utils/
     ├── logger.ts
     └── embeds/
@@ -135,7 +136,8 @@ src/
 ```
 assets/
 ├── logo.svg                    # Source vector logo
-└── logo.png                    # PNG logo used in embeds
+├── logo.png                    # PNG logo used in embeds
+└── preview.svg                 # README preview image
 ```
 
 ## Scripts
