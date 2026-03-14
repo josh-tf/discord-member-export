@@ -1,5 +1,6 @@
 import { MemberExportBot } from './bot.js';
 import { logger } from './utils/logger.js';
+import { validateConfig } from './config/bot.config.js';
 
 /**
  * Main entry point for the Discord Member Export Bot
@@ -53,6 +54,7 @@ process.on('SIGTERM', () => shutdown('SIGTERM'));
     logger.info('='.repeat(50));
     logger.info('');
 
+    validateConfig();
     await bot.start();
   } catch (error) {
     logger.error('Failed to start bot:', error);

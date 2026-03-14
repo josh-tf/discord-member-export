@@ -60,11 +60,13 @@ export const BotConfig = {
   },
 } as const;
 
-// Validation
-if (!BotConfig.discord.token) {
-  throw new Error('DISCORD_TOKEN is required in .env file');
-}
+// Validation — call before using the bot, not at import time
+export function validateConfig(): void {
+  if (!BotConfig.discord.token) {
+    throw new Error('DISCORD_TOKEN is required. Set it as an environment variable or in .env file');
+  }
 
-if (!BotConfig.discord.clientId) {
-  throw new Error('DISCORD_CLIENT_ID is required in .env file');
+  if (!BotConfig.discord.clientId) {
+    throw new Error('DISCORD_CLIENT_ID is required. Set it as an environment variable or in .env file');
+  }
 }
