@@ -40,6 +40,7 @@
     "@typescript-eslint/parser": "^6.20.0",
     "eslint": "^8.56.0"
   },
+  "packageManager": "pnpm@10.32.1",
   "engines": {
     "node": ">=18.0.0",
     "pnpm": ">=8.0.0"
