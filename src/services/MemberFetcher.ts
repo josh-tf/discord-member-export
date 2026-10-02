@@ -238,12 +238,9 @@ export class MemberFetcher {
 
     for (let attempt = 0; attempt <= this.maxRetries; attempt++) {
       try {
-        const fetchOptions: { limit: number; after?: string } = { limit };
-        if (after) {
-          fetchOptions.after = after;
-        }
-
-        const members = await guild.members.fetch(fetchOptions);
+        // members.list() is the REST endpoint, which pages by `after`. members.fetch({ limit })
+        // requests over the gateway and ignores `after`, so every batch returned the same members.
+        const members = await guild.members.list({ limit, after, cache: true });
 
         return { members, retries };
       } catch (error) {

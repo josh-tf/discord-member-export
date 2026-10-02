@@ -14,15 +14,6 @@ A Discord bot for exporting guild member lists with advanced filtering, real-tim
 - Export history and statistics via SQLite
 - Rate-limited fetching with automatic retry (45 req/s)
 
-## One-click deploy
-
-Host the bot on a cloud provider without any local setup:
-
-[![Deploy on Railway](https://railway.com/button.svg)](https://railway.com/deploy/JOoK3j?referralCode=W0GORr&utm_medium=integration&utm_source=template&utm_campaign=generic)
-
-> [!NOTE]
-> After deploying, set your environment variables (`DISCORD_TOKEN`, `DISCORD_CLIENT_ID`, etc.) in the provider's dashboard, then run `pnpm deploy-commands` once to register slash commands.
-
 ## Prerequisites
 
 - Node.js 18+
